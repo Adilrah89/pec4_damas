@@ -1,6 +1,6 @@
 // pec4.test.js
 
-const { initializeBoard, validateMove, makeMove } = require('./path/to/checkers.js');
+const { initializeBoard, validateMove, makeMove } = require('./pec4.js');
 
 describe("Checkers Game Tests", () => {
 
@@ -8,7 +8,7 @@ describe("Checkers Game Tests", () => {
         const board = initializeBoard();
         expect(board).toBeInstanceOf(Array);
         expect(board.length).toBe(8);
-        expect(board[0][1]).toMatch(/player1|empty/); // Example test
+        expect(board[0][1]).toMatch(/b|w|null/); // Black piece in first row
     });
 
     test("should validate a legal move for a player", () => {
@@ -29,7 +29,7 @@ describe("Checkers Game Tests", () => {
         let board = initializeBoard();
         const move = { from: [2, 3], to: [3, 4] };
         board = makeMove(board, move, "player1");
-        expect(board[3][4]).toBe("player1"); // Example assertion
+        expect(board[3][4]).toBe("b"); // Black piece moved (player1 = black)
     });
 
     test("should not update board on illegal move", () => {

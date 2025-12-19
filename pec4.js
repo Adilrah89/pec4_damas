@@ -148,7 +148,7 @@ function validateMove(board, move, player) {
 
   // Map player to piece color
   const playerPiece = player === "player1" ? "b" : "w";
-  if (piece[0] !== playerPiece) {
+  if (piece.toLowerCase()[0] !== playerPiece) {
     return false;
   }
 
@@ -172,7 +172,7 @@ function validateMove(board, move, player) {
     const jumpedCol = startCol + (endCol - startCol) / 2;
     const jumpedPiece = board[jumpedRow][jumpedCol];
     
-    if (jumpedPiece && jumpedPiece[0] !== playerPiece) {
+    if (jumpedPiece && jumpedPiece.toLowerCase()[0] !== playerPiece) {
       return true;
     }
   }

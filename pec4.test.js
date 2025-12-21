@@ -1,6 +1,6 @@
 // pec4.test.js
 
-const { initializeBoard, validateMove, makeMove } = require('./path/to/checkers.js');
+const { initializeBoard, validateMove, makeMove } = require('./pec4.js');
 
 describe("Checkers Game Tests", () => {
 

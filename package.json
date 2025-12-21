@@ -1,0 +1,11 @@
+{
+  "name": "pec4_damas",
+  "version": "1.0.0",
+  "description": "Checkers game implementation",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
